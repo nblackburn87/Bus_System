@@ -23,9 +23,13 @@ class LinesController < ApplicationController
   end
 
   def update
+    @station = Station.find(params[:line][:id])
     @line = Line.find(params[:id])
     if @line.update(line_params)
-      flash[:notice] = "Line #{@line.name} updated successfully."
+      unless @line.stations.include?(@station)
+        @line.stations << @station
+        flash[:notice] = "Line #{@line.name} updated successfully."
+      end
       redirect_to line_path(@line)
     else
       render 'edit'
@@ -46,6 +50,6 @@ class LinesController < ApplicationController
   private
 
   def line_params
-    params.require(:line).permit(:name)
+    params.require(:line).permit(:name, :station_id)
   end
 end

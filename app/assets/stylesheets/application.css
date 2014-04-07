@@ -13,4 +13,38 @@
  *= require_tree .
  */
 
+html {
+  background: url("./bonnet_bus.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+h1 {
+  color: #000080; text-shadow: gray 0.1em 0.1em 0.2em
+}
+
+body {
+  background-color: transparent !important;
+}
+
+.btn {
+  background-color: #AD6200;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.btn:hover{
+  background-color: #000080;
+  color: white;
+}
+
+a:link {color: #E88300;}
+a:visited {color: #EBA852;}
+a:hover {color: #5295EB;}
+
+ul {
+  list-style-type: none;
+  padding: 5px;
+}

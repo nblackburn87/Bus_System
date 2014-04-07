@@ -5,13 +5,8 @@
   <div class="form-group">
     <%= s.label :name %>
     <%= s.text_field :name %>
+    <%= s.collection_select(:id, Station.all, :id, :name) %>
   </div>
-
-<select id="stop_id" name="station_id">
-  <% Station.all.each do |station| %>
-    <option value="<%= station.id %>"><%= station.name %></option>
-  <% end %>
-</select>
 
   <%= s.submit(:class => "btn btn-primary") %>
 <% end %>
