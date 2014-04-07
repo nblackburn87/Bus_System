@@ -1,0 +1,13 @@
+<h1><%= @line.name %></h1>
+  <ul>
+  <% @line.stations do |s| %>
+    <li><%= s.name %></li>
+  <% end %>
+</ul>
+<p><%= link_to "Edit", edit_line_path(@line), :class => "btn btn-default" %></p>
+<p><%= link_to "Delete", line_path(@line),
+                         :confirm => "Are you sure?",
+                         :method => "delete",
+                         :class => "btn btn-danger" %></p>
+
+<p><%= link_to "Return to Line Listing", lines_path, :class => "btn btn-default" %></p>
