@@ -3,4 +3,5 @@ BusSystem::Application.routes.draw do
   resources :mains, :only => [:index]
   resources :stations
   resources :lines
+  resources :buses, :except => [:show]
 end

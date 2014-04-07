@@ -1,10 +1,18 @@
 <h1><%= @line.name %></h1>
 
+<h3>Stations On This Line:</h3>
  <ul>
   <% @line.stations.each do |station| %>
     <li><%= link_to station.name, station_path(station) %></li>
   <% end %>
 </ul>
+
+<h3>Buses Serving This Line:</h3>
+  <ul>
+    <% @line.buses.each do |bus| %>
+      <li><%= bus.id %></li>
+    <% end %>
+  </ul>
 
 <%= link_to "Edit", edit_line_path(@line), :class => "btn btn-default" %>
 <%= link_to "Delete", line_path(@line),

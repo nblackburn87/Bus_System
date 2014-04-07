@@ -25,6 +25,22 @@ h1 {
   color: #000080; text-shadow: gray 0.1em 0.1em 0.2em
 }
 
+h3 {
+  color: #000080; text-shadow: gray 0.1em 0.1em 0.2em
+}
+
+.flash {
+  color: #000080; text-shadow: gray 0.1em 0.1em 0.2em
+}
+
+p {
+  color: #000080; text-shadow: gray 0.1em 0.1em 0.2em
+}
+
+li {
+ color: #000080; text-shadow: gray 0.1em 0.1em 0.2em
+}
+
 body {
   background-color: transparent !important;
 }

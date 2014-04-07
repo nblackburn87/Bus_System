@@ -1,0 +1,10 @@
+<h1>Buses</h1>
+
+<ul>
+  <% @buses.each do |bus| %>
+    <li><p>Bus Number: <%= bus.id %></p></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Bus", new_bus_path, :class => "btn btn-default" %>
+<%= link_to "Return to main index", root_path, :class => "btn btn-default" %>
