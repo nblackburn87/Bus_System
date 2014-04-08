@@ -4,4 +4,5 @@ BusSystem::Application.routes.draw do
   resources :stations
   resources :lines
   resources :buses, :except => [:show]
+  resources :schedules, :only => [:new, :create]
 end
